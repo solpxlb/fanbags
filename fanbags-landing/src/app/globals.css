@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f0f0f;
+  --primary: #7f13ec;
+  --primary-dark: #630eb8;
+  --background-subtle: #faf8fc;
+  --text-main: #140d1b;
+  --text-muted: #6b7280;
+}
+
+@theme inline {
+  /* Colors */
+  --color-primary: #7f13ec;
+  --color-primary-dark: #630eb8;
+  --color-background: #ffffff;
+  --color-background-subtle: #faf8fc;
+  --color-text-main: #140d1b;
+  --color-text-muted: #6b7280;
+
+  /* Typography */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'DM Sans', sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgba(127, 19, 236, 0.2);
+  color: var(--primary);
+}
+
+/* Material Symbols Icons Configuration */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  user-select: none;
+}
+
+/* Gradient Text Utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary) 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Premium Mesh Gradient Background */
+.mesh-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(127, 19, 236, 0.08) 0%, rgba(127, 19, 236, 0) 50%);
+}
